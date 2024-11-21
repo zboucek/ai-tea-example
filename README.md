@@ -35,16 +35,16 @@ pip install tensorflow scikit-learn numpy matplotlib
 
 ### PyTorch
 ```bash
-python pytorch_iris_classification.py
+python ai-pytorch.py
 ```
 
 ### TensorFlow
 ```bash
-python tensorflow_iris_classification.py
+python ai-tf.py
 ```
 
 ### MATLAB
-Open `matlab_iris_classification.m` in MATLAB and run
+Open `ai_matlab.m` in MATLAB and run
 
 ## Dataset
 - Iris flower classification dataset
