@@ -2,8 +2,8 @@
 
 ## Overview
 This repository contains examples of machine learning models implemented using multiple frameworks:
-- Classification: Iris flower classification.
-- Regression: Real-world regression task with surface roughness prediction.
+- **Classification**: Iris flower classification.
+- **Regression**: Real-world regression task with surface roughness prediction.
 
 ### Frameworks Covered
 - **PyTorch**
@@ -93,17 +93,41 @@ Open `ai_maltab_workshop2.m` in MATLAB and run.
 
 ---
 
-## Performance
+## Performance and Results
 
 ### Classification (Iris Dataset)
 - **Typical Accuracy:** 90-95%
 - **Variation:** Depends on the framework and model configuration.
 
 ### Regression (Workshop 2)
-- **Metrics Reported:**
-  - **MAE:** Mean Absolute Error
-  - **MSE:** Mean Squared Error
-  - **R²:** Coefficient of Determination
+#### Python Results:
+| Model                         | MAE   | MSE   | R²     |
+|-------------------------------|-------|-------|--------|
+| Linear Regression             | 2.88  | 14.20 | 0.33   |
+| Random Forest                 | 1.63  | 6.88  | 0.67   |
+| XGBoost                       | 1.73  | 6.50  | 0.69   |
+| Polynomial Regression (Ridge) | 2.55  | 7.56  | 0.47   |
+
+#### MATLAB Results:
+| Model                         | MAE   | MSE   | R²     |
+|-------------------------------|-------|-------|--------|
+| Linear Regression             | 3.80  | 23.56 | 0.40   |
+| Random Forest                 | 2.01  | 7.41  | 0.79   |
+| Polynomial Regression (Ridge) | 1.66  | 4.70  | 0.87   |
+
+#### Comments on Results:
+1. **Linear Regression**:
+   - Performs poorly in both Python and MATLAB, with low `R²` and high error metrics. This suggests that the relationships in the data are non-linear and cannot be captured effectively by a simple linear model.
+
+2. **Random Forest**:
+   - Shows good performance in both frameworks, with a better `R²` in MATLAB. Differences may be due to hyperparameter defaults and randomness in tree construction.
+
+3. **Polynomial Regression (Ridge)**:
+   - **Python:** Performs moderately well but struggles to capture complex relationships.
+   - **MATLAB:** Performs exceptionally well, likely due to better handling of polynomial features and regularization. Differences in feature generation or regularization tuning between frameworks may explain the discrepancy.
+
+4. **XGBoost**:
+   - Only implemented in Python, it performs slightly better than Random Forest. Adding an XGBoost implementation in MATLAB could provide further insights into model performance across frameworks.
 
 ---
 
