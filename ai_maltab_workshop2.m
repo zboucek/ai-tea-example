@@ -18,6 +18,7 @@ X = fillmissing(X, 'linear');
 y = fillmissing(y, 'linear');
 
 % Split data into training and testing sets
+rng(42); % Same seed as Python
 cv = cvpartition(size(X, 1), 'HoldOut', 0.2);
 X_train = X(training(cv), :);
 X_test = X(test(cv), :);
