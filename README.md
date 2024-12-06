@@ -84,7 +84,8 @@ Open `ai_maltab_workshop2.m` in MATLAB and run.
 - **Features:** 4 (Sepal length, Sepal width, Petal length, Petal width)
 
 ### Workshop 2: Surface Roughness Regression
-- **Dataset:** `Workshop02/data/DATA_1.csv`
+- **Dataset Source:** [AI-RICE/Workshop GitHub Repository](https://github.com/AI-RICE/Workshop)
+- **Dataset Location:** `Workshop02/data/DATA_1.csv`
 - **Task:** Predict surface roughness (`Ra`) using:
   - Laser power (`lpow`)
   - Laser speed (`lspeed`)
